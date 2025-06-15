@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skyline University Enrollment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d0000 100%);
+      color: #fff;
+      min-height: 100vh;
+    }
+    header {
+      background: linear-gradient(90deg, #b71c1c 60%, #880808 100%);
+      text-align: center;
+      padding: 48px 0 32px 0;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+      border-bottom-left-radius: 48px;
+      border-bottom-right-radius: 48px;
+      position: relative;
+    }
+    header .logo {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 2px;
+      text-shadow: 0 4px 24px #b71c1c, 0 2px 8px #000;
+      margin-left: 15px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    header img {
+      width: 60px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+    .divider {
+      width: 90px;
+      height: 5px;
+      background: linear-gradient(90deg, #ff1744 0%, #b71c1c 100%);
+      border-radius: 3px;
+      margin: 36px auto 28px auto;
+      box-shadow: 0 2px 12px #b71c1c66;
+    }
+    .main-div {
+      padding: 2rem 1.5rem 2.5rem 1.5rem;
+      background-color: #1a1a1a;
+      margin: 2rem auto 2rem auto;
+      max-width: 600px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(255, 23, 68, 0.10);
+      color: #fff;
+      border: 2px solid #ff1744;
+      text-align: center;
+      position: relative;
+    }
+    .main-div h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #ff1744;
+      margin-bottom: 18px;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 12px #b71c1c66;
+    }
+    .main-div p {
+      font-size: 1.2rem;
+      color: #fff;
+      margin-bottom: 32px;
+    }
+    .go-home-btn {
+      display: inline-block;
+      padding: 14px 36px;
+      font-size: 1.15rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      letter-spacing: 1px;
+      background: linear-gradient(90deg, #ff1744 0%, #b71c1c 100%);
+      color: #fff;
+      box-shadow: 0 2px 12px #b71c1c33;
+      transition: background 0.2s, transform 0.2s;
+      text-decoration: none;
+      margin-top: 16px;
+    }
+    .go-home-btn:hover {
+      background: linear-gradient(90deg, #b71c1c 0%, #ff1744 100%);
+      transform: translateY(-2px) scale(1.04);
+      color: #fff;
+      text-decoration: none;
+    }
+    @media (max-width: 700px) {
+      .main-div {
+        padding: 1rem 0.5rem 1.5rem 0.5rem;
+        max-width: 95vw;
+      }
+      .main-div h1 {
+        font-size: 1.3rem;
+      }
+      .go-home-btn {
+        width: 100%;
+        font-size: 1rem;
+        padding: 12px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logoo-removebg-preview.png" alt="Skyline University Logo" />
+    <span class="logo">Skyline University(SKL) Registration</span>
+  </header>
+  <div class="divider"></div>
+  <div class="main-div">
+    <h1>Registration Successful!</h1>
+    <p>Your registration has been submitted successfully.<br>
+    Thank you for applying to Skyline University!</p>
+    <a href="Act8.html" class="go-home-btn">Go Back to Home</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Christian Paul Perez Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(ellipse at top left, #2d0000 0%, #1a1a1a 100%);
+      color: #fff;
+      font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow-x: hidden;
+    }
+    nav {
+      width: 100%;
+      background: linear-gradient(90deg, #b71c1c 60%, #880808 100%);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+      border-bottom-left-radius: 32px;
+      border-bottom-right-radius: 32px;
+      padding: 0;
+      margin-bottom: 0;
+      position: relative;
+      z-index: 100;
+      animation: navfade 1.2s cubic-bezier(.77,0,.18,1) 0.1s both;
+    }
+    @keyframes navfade {
+      from { opacity: 0; transform: translateY(-40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .menu {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-weight: 600;
+      height: 70px;
+    }
+    .menu li {
+      margin: 0 20px;
+      position: relative;
+    }
+    .menu li a, .menu li .dropbtn {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 0 16px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      line-height: 70px;
+      display: inline-block;
+      letter-spacing: 1px;
+    }
+    .menu li a:hover, .menu li .dropbtn:hover, .menu li a.active {
+      background: #ff1744;
+      color: #fff;
+      box-shadow: 0 2px 12px #b71c1c55;
+    }
+    .menu li.dropdown {
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: #2d0000;
+      min-width: 260px;
+      max-height: 350px;
+      overflow-y: auto;
+      box-shadow: 0 8px 24px #b71c1c66;
+      z-index: 1;
+      border-radius: 0 0 16px 16px;
+      margin-top: 0;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 8px 0;
+      animation: dropdownfade 0.4s cubic-bezier(.77,0,.18,1);
+    }
+    @keyframes dropdownfade {
+      from { opacity: 0; transform: translateY(-10px) translateX(-50%);}
+      to { opacity: 1; transform: translateY(0) translateX(-50%);}
+    }
+    .dropdown-content .dropdown-title {
+      font-weight: bold;
+      color: #ff1744;
+      padding: 10px 24px 6px 24px;
+      font-size: 1.05rem;
+      border-bottom: 1px solid #b71c1c33;
+      background: transparent;
+      margin-bottom: 4px;
+      letter-spacing: 1px;
+    }
+    .dropdown-content a {
+      color: #fff;
+      padding: 10px 24px;
+      display: block;
+      text-decoration: none;
+      border-bottom: 1px solid #b71c1c33;
+      font-size: 1rem;
+      border-radius: 0;
+      background: transparent;
+      transition: background 0.2s, padding-left 0.2s;
+      line-height: 1.2;
+      letter-spacing: 0.5px;
+    }
+    .dropdown-content a:last-child {
+      border-bottom: none;
+    }
+    .dropdown-content a:hover {
+      background: #b71c1c;
+      color: #fff;
+      padding-left: 32px;
+    }
+    .menu li.dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .about-section {
+      max-width: 1000px;
+      margin: 80px auto 0 auto;
+      background: rgba(30, 0, 0, 0.97);
+      border-radius: 32px;
+      box-shadow: 0 8px 40px rgba(255,23,68,0.13), 0 2px 12px rgba(0,0,0,0.18);
+      border: 2px solid #ff1744;
+      padding: 56px 48px 48px 48px;
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      animation: aboutfade 1.2s cubic-bezier(.77,0,.18,1) 0.2s both;
+    }
+    @keyframes aboutfade {
+      from { opacity: 0; transform: translateY(40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .about-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #ff1744;
+      box-shadow: 0 4px 24px #b71c1c66;
+      background: #fff;
+      transition: transform 0.3s;
+    }
+    .about-img:hover {
+      transform: scale(1.06) rotate(-3deg);
+      box-shadow: 0 8px 32px #ff174455;
+    }
+    .about-content h1 {
+      color: #ff1744;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 12px #b71c1c, 0 1px 4px #000;
+    }
+    .about-content p {
+      color: #fff;
+      font-size: 1.18rem;
+      margin-bottom: 12px;
+      line-height: 1.7;
+      text-shadow: 0 1px 4px #00000033;
+    }
+
+    /* Activities Modal Card Section */
+    .activities-section {
+      max-width: 1000px;
+      margin: 48px auto 48px auto;
+      padding: 32px 48px;
+      background: rgba(30, 0, 0, 0.96);
+      border-radius: 24px;
+      border: 2px solid #b71c1c;
+      box-shadow: 0 4px 24px #b71c1c22;
+      animation: aboutfade 1.2s cubic-bezier(.77,0,.18,1) 0.3s both;
+    }
+    .activities-section h2 {
+      color: #ff1744;
+      margin-bottom: 28px;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      font-weight: 700;
+      text-align: left;
+      text-shadow: 0 2px 12px #b71c1c, 0 1px 4px #000;
+    }
+    .activity-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+    }
+    .activity-card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 18px;
+      border: 1.5px solid #ff1744;
+      box-shadow: 0 2px 16px #b71c1c22;
+      padding: 0 0 18px 0;
+      cursor: pointer;
+      transition: transform 0.18s, box-shadow 0.18s;
+      position: relative;
+      overflow: hidden;
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .activity-card:hover {
+      transform: translateY(-8px) scale(1.025);
+      box-shadow: 0 8px 32px #ff174455, 0 2px 12px #00000033;
+      border-color: #ff1744;
+    }
+    .activity-img {
+      width: 100%;
+      height: 180px;
+      background: #222;
+      background-size: cover;
+      background-position: center;
+      border-radius: 18px 18px 0 0;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      color: #fff;
+    }
+    .activity-title {
+      color: #ff1744;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+    .activity-date {
+      color: #fff;
+      font-size: 1rem;
+      opacity: 0.7;
+      text-align: center;
+    }
+
+    /* Modal Styles */
+    .modal-bg {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(10,10,20,0.75);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 0.2s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0;}
+      to { opacity: 1;}
+    }
+    .modal-card {
+      background: linear-gradient(135deg, #23243a 60%, #2d0000 100%);
+      border-radius: 24px;
+      box-shadow: 0 8px 40px #00000088;
+      padding: 36px 32px 28px 32px;
+      max-width: 420px;
+      width: 90vw;
+      position: relative;
+      color: #fff;
+      text-align: center;
+      animation: modalPop 0.25s;
+    }
+    @keyframes modalPop {
+      from { transform: scale(0.92);}
+      to { transform: scale(1);}
+    }
+    .modal-header {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #d1bfff;
+      margin-bottom: 6px;
+    }
+    .modal-date {
+      font-size: 1.1rem;
+      color: #bdbfff;
+      margin-bottom: 18px;
+    }
+    .modal-desc {
+      font-size: 1.08rem;
+      color: #fff;
+      margin-bottom: 28px;
+      line-height: 1.7;
+    }
+    .modal-btn {
+      display: inline-block;
+      padding: 14px 36px;
+      background: linear-gradient(90deg, #7c5cff 60%, #a084ff 100%);
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 24px;
+      box-shadow: 0 2px 12px #7c5cff55;
+      cursor: pointer;
+      text-decoration: none;
+      letter-spacing: 1px;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+    .modal-btn:hover {
+      background: linear-gradient(90deg, #a084ff 0%, #7c5cff 100%);
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 6px 24px #a084ff55;
+    }
+    .modal-close {
+      position: absolute;
+      top: 18px;
+      right: 22px;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+    .modal-close:hover {
+      opacity: 1;
+    }
+
+    /* Extra Section Styles */
+    .section-extra {
+      max-width: 1000px;
+      margin: 48px auto;
+      padding: 32px 48px;
+      background: rgba(30, 0, 0, 0.95);
+      border-radius: 24px;
+      border: 2px solid #b71c1c;
+      box-shadow: 0 4px 24px #b71c1c22;
+      animation: aboutfade 1.2s cubic-bezier(.77,0,.18,1) 0.4s both;
+    }
+    .section-extra h2 {
+      color: #ff1744;
+      margin-bottom: 18px;
+      font-size: 1.7rem;
+      letter-spacing: 1px;
+      font-weight: 700;
+      text-shadow: 0 2px 12px #b71c1c, 0 1px 4px #000;
+    }
+    .section-extra p, .section-extra ul {
+      color: #fff;
+      font-size: 1.08rem;
+      margin-bottom: 12px;
+      line-height: 1.7;
+      text-shadow: 0 1px 4px #00000033;
+    }
+    .section-extra ul {
+      padding-left: 24px;
+    }
+    .section-extra .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 24px;
+      margin-bottom: 0;
+    }
+    .section-extra .skills-list li {
+      background: #b71c1c;
+      color: #fff;
+      border-radius: 8px;
+      padding: 8px 18px;
+      font-size: 1rem;
+      font-weight: 600;
+      box-shadow: 0 2px 8px #b71c1c33;
+      margin-bottom: 0;
+      display: inline-block;
+    }
+    .section-extra .timeline {
+      border-left: 3px solid #ff1744;
+      padding-left: 24px;
+      margin-left: 8px;
+    }
+    .section-extra .timeline-event {
+      margin-bottom: 22px;
+      position: relative;
+    }
+    .section-extra .timeline-event:before {
+      content: '';
+      position: absolute;
+      left: -13px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      background: #ff1744;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      box-shadow: 0 2px 8px #b71c1c33;
+    }
+    @media (max-width: 900px) {
+      .about-section {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 12px;
+        gap: 18px;
+      }
+      .about-img {
+        width: 120px;
+        height: 120px;
+      }
+      .activities-section {
+        padding: 18px 8px;
+      }
+      .activity-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .section-extra {
+        padding: 18px 8px;
+      }
+    }
+    @media (max-width: 600px) {
+      nav {
+        border-bottom-left-radius: 18px;
+        border-bottom-right-radius: 18px;
+      }
+      .about-section {
+        padding: 12px 2vw;
+      }
+      .activities-section {
+        padding: 8px 2vw;
+      }
+      .activity-card {
+        min-height: 220px;
+      }
+      .activity-img {
+        height: 110px;
+        font-size: 1.5rem;
+      }
+      .section-extra {
+        padding: 8px 2vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul class="menu">
+      <li><a class="active" href="#about">About Me</a></li>
+      <li class="dropdown">
+        <button class="dropbtn">Activities &#9660;</button>
+        <div class="dropdown-content">
+          <div class="dropdown-title">My Activities</div>
+          <a href="#activities">Activities (Cards)</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <button class="dropbtn">Group Project &#9660;</button>
+        <div class="dropdown-content">
+          <div class="dropdown-title">Group Project</div>
+          <a href="https://chantottt.github.io/UP-Website/" target="_blank">Visit Group Project</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="about-section" id="about">
+    <img src="picko.jpg" alt="Your Photo" class="about-img">
+    <div class="about-content">
+      <h1>Christian Paul Perez</h1>
+      <p>Hello! I'm Christian Paul Perez, a passionate web developer and student. Welcome to my portfolio website. Here, you'll find all my web development activities and projects, each crafted with dedication and creativity. Explore my work and get to know more about my journey in tech!</p>
+    </div>
+  </section>
+
+  <!-- Modern Activities Card Section with Modal -->
+  <section class="activities-section" id="activities">
+    <h2>My Activities</h2>
+    <div class="activity-grid">
+      <div class="activity-card" onclick="openModal(0)">
+        <div class="activity-img" style="background-image:url('activity1-preview.jpg');display:flex;align-items:center;justify-content:center;">🎵</div>
+        <div class="activity-title">Eye of the Tiger</div>
+        <div class="activity-date">March 24, 2025</div>
+      </div>
+      <div class="activity-card" onclick="openModal(1)">
+        <div class="activity-img" style="background-image:url('activity2-preview.jpg');display:flex;align-items:center;justify-content:center;">📄</div>
+        <div class="activity-title">Resume without Lists</div>
+        <div class="activity-date">March 2025</div>
+      </div>
+      <div class="activity-card" onclick="openModal(2)">
+        <div class="activity-img" style="background-image:url('activity3-preview.jpg');display:flex;align-items:center;justify-content:center;">📝</div>
+        <div class="activity-title">Resume with Lists</div>
+        <div class="activity-date">March 2025</div>
+      </div>
+      <div class="activity-card" onclick="openModal(3)">
+        <div class="activity-img" style="background-image:url('activity4-preview.jpg');display:flex;align-items:center;justify-content:center;">🗺️</div>
+        <div class="activity-title">Map Area</div>
+        <div class="activity-date">March 2025</div>
+      </div>
+      <div class="activity-card" onclick="openModal(4)">
+        <div class="activity-img" style="background-image:url('activity5-preview.jpg');display:flex;align-items:center;justify-content:center;">📊</div>
+        <div class="activity-title">Table Colspan/Rowspan & Forms</div>
+        <div class="activity-date">March 2025</div>
+      </div>
+      <div class="activity-card" onclick="openModal(5)">
+        <div class="activity-img" style="background-image:url('activity6-preview.jpg');display:flex;align-items:center;justify-content:center;">📅</div>
+        <div class="activity-title">Calendar without div</div>
+        <div class="activity-date">March 2025</div>
+      </div>
+      <div class="activity-card" onclick="openModal(6)">
+        <div class="activity-img" style="background-image:url('activity7-preview.jpg');display:flex;align-items:center;justify-content:center;">📆</div>
+        <div class="activity-title">Calendar with div</div>
+        <div class="activity-date">March 2025</div>
+      </div>
+      <div class="activity-card" onclick="openModal(7)">
+        <div class="activity-img" style="background-image:url('activity8-preview.jpg');display:flex;align-items:center;justify-content:center;">❓</div>
+        <div class="activity-title">NU Quest</div>
+        <div class="activity-date">March 2025</div>
+      </div>
+      <div class="activity-card" onclick="openModal(8)">
+        <div class="activity-img" style="background-image:url('activity9-preview.jpg');display:flex;align-items:center;justify-content:center;">✨</div>
+        <div class="activity-title">Navigation/Animation/Transition</div>
+        <div class="activity-date">March 2025</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Structure -->
+  <div id="activityModal" class="modal-bg" style="display:none;">
+    <div class="modal-card">
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <div class="modal-header" id="modalTitle"></div>
+      <div class="modal-date" id="modalDate"></div>
+      <div class="modal-desc" id="modalDesc"></div>
+      <a id="modalLink" class="modal-btn" href="#" target="_blank">Click to Continue</a>
+    </div>
+  </div>
+
+  <!-- Extra Section: Skills -->
+  <section class="section-extra" id="skills">
+    <h2>Skills & Technologies</h2>
+    <ul class="skills-list">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>Java</li>
+      <li>PHP</li>
+      <li>MySQL</li>
+      <li>Git & GitHub</li>
+      <li>Responsive Design</li>
+      <li>UI/UX Principles</li>
+      <li>Bootstrap</li>
+      <li>Figma</li>
+    </ul>
+  </section>
+
+  <!-- Extra Section: Timeline -->
+  <section class="section-extra" id="timeline">
+    <h2>My Learning Journey</h2>
+    <div class="timeline">
+      <div class="timeline-event">
+        <strong>2022:</strong> Started my journey in web development, learning HTML and CSS basics.
+      </div>
+      <div class="timeline-event">
+        <strong>2023:</strong> Built my first interactive website and explored JavaScript for dynamic content.
+      </div>
+      <div class="timeline-event">
+        <strong>2024:</strong> Joined collaborative projects, learned Git, and contributed to group web apps.
+      </div>
+      <div class="timeline-event">
+        <strong>2025:</strong> Focused on advanced CSS, responsive design, and UI/UX best practices.
+      </div>
+    </div>
+  </section>
+
+  <!-- Extra Section: Contact -->
+  <section class="section-extra" id="contact">
+    <h2>Contact Me</h2>
+    <p>If you'd like to connect, collaborate, or just say hi, feel free to reach out!</p>
+    <ul>
+      <li>Email: <a href="mailto:christianperez@gmail.com" style="color:#ff1744;">christianperez@gmail.com</a></li>
+      <li>Mobile: <a href="tel:09923985436" style="color:#ff1744;">0992 398 5436</a></li>
+      <li>Location: Mabalacat City, Pampanga, Philippines</li>
+      <li>
+        GitHub: <a href="https://chantottt.github.io" target="_blank" style="color:#ff1744;">https://chantottt.github.io</a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Extra Section: Hobbies -->
+  <section class="section-extra" id="hobbies">
+    <h2>Hobbies & Interests</h2>
+    <ul>
+      <li>Playing guitar and composing music</li>
+      <li>Exploring new web technologies</li>
+      <li>Gaming and eSports</li>
+      <li>Traveling and food trips</li>
+      <li>Photography and digital art</li>
+    </ul>
+  </section>
+
+  <script>
+    const activities = [
+      {
+        title: "Eye of the Tiger",
+        date: "March 24, 2025",
+        desc: `This activity focuses on creating a dynamic webpage inspired by the classic "Eye of the Tiger" theme. Students learn basic HTML structure, CSS styling, and image optimization techniques to create an engaging visual experience.`,
+        link: "../Perez_ITE201/Activity 1/Act1.html"
+      },
+      {
+        title: "Resume without Lists",
+        date: "March 2025",
+        desc: `A resume page built using only paragraphs and line breaks, focusing on semantic HTML without using lists.`,
+        link: "../Perez_ITE201/Activity2/activity2.html"
+      },
+      {
+        title: "Resume with Lists",
+        date: "March 2025",
+        desc: `A resume page utilizing ordered and unordered lists for better structure and readability.`,
+        link: "../Perez_ITE201/Activity 3/activity3.html"
+      },
+      {
+        title: "Map Area",
+        date: "March 2025",
+        desc: `An interactive HTML image map project, allowing users to click on different regions for more information.`,
+        link: "../Perez_ITE201/Activity 4/Activity4_Perez.html"
+      },
+      {
+        title: "Table Colspan/Rowspan & Forms",
+        date: "March 2025",
+        desc: `A demonstration of advanced table features in HTML, including colspan, rowspan, and form integration.`,
+        link: "../Perez_ITE201/Activity5/Act5.html"
+      },
+      {
+        title: "Calendar without div",
+        date: "March 2025",
+        desc: `A calendar layout created using only tables and basic HTML elements, without any divs.`,
+        link: "../Perez_ITE201/Activity6/Act6.html"
+      },
+      {
+        title: "Calendar with div",
+        date: "March 2025",
+        desc: `A modern calendar layout using divs and CSS for flexible styling and structure.`,
+        link: "../Perez_ITE201/Activity7/Activity7.html"
+      },
+      {
+        title: "NU Quest",
+        date: "March 2025",
+        desc: `A web-based quiz game project, showcasing interactive elements and user engagement.`,
+        link: "../Perez_ITE201/Activity8/Act8.html"
+      },
+      {
+        title: "Navigation/Animation/Transition",
+        date: "March 2025",
+        desc: `A collection of HTML files demonstrating advanced navigation, CSS animations, and transitions. <b>See bookmarks for each demo.</b>`,
+        link: "../Perez_ITE201/Activity 9/animation9.html"
+      }
+    ];
+
+    function openModal(idx) {
+      document.getElementById('modalTitle').innerText = activities[idx].title;
+      document.getElementById('modalDate').innerText = activities[idx].date;
+      document.getElementById('modalDesc').innerHTML = activities[idx].desc;
+      document.getElementById('modalLink').href = activities[idx].link;
+      document.getElementById('activityModal').style.display = 'flex';
+    }
+    function closeModal() {
+      document.getElementById('activityModal').style.display = 'none';
+    }
+    window.onclick = function(event) {
+      const modal = document.getElementById('activityModal');
+      if (event.target === modal) closeModal();
+    }
+  </script>
+</body>
+</html>

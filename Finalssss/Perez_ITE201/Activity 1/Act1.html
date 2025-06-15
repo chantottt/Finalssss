@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perez Christian Paul</title>
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d0000 100%);
+            font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            min-height: 100vh;
+        }
+        .header {
+            background: linear-gradient(90deg, #b71c1c 60%, #880808 100%);
+            text-align: center;
+            padding: 48px 0 32px 0;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+            border-bottom-left-radius: 48px;
+            border-bottom-right-radius: 48px;
+            position: relative;
+        }
+        .header h1 {
+            font-size: 3rem;
+            margin: 0 0 12px 0;
+            letter-spacing: 3px;
+            color: #fff;
+            text-shadow: 0 4px 24px #b71c1c, 0 2px 8px #000;
+            font-weight: 700;
+        }
+        .header h3 {
+            font-size: 1.3rem;
+            margin: 0;
+            color: #ffb3b3;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+        .divider {
+            width: 90px;
+            height: 5px;
+            background: linear-gradient(90deg, #ff1744 0%, #b71c1c 100%);
+            border-radius: 3px;
+            margin: 36px auto 28px auto;
+            box-shadow: 0 2px 12px #b71c1c66;
+        }
+        .lyrics-container {
+            max-width: 900px;
+            margin: 48px auto 0 auto;
+            background: rgba(30, 0, 0, 0.93);
+            border-radius: 28px;
+            box-shadow: 0 8px 40px rgba(255,23,68,0.10), 0 2px 12px rgba(0,0,0,0.18);
+            padding: 48px 36px 32px 36px;
+            border: 2px solid #ff1744;
+            position: relative;
+            overflow: hidden;
+        }
+        .lyrics-container:before {
+            content: "";
+            position: absolute;
+            left: -40px;
+            top: -40px;
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, #ff1744 0%, transparent 70%);
+            opacity: 0.13;
+            z-index: 0;
+        }
+        .lyrics-container:after {
+            content: "";
+            position: absolute;
+            right: -40px;
+            bottom: -40px;
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, #b71c1c 0%, transparent 70%);
+            opacity: 0.13;
+            z-index: 0;
+        }
+        .lyrics-container p {
+            text-align: center;
+            font-size: 1.22rem;
+            line-height: 2.1;
+            margin: 32px 0;
+            color: #fff;
+            position: relative;
+            z-index: 1;
+            letter-spacing: 0.5px;
+        }
+        .lyrics-container b {
+            color: #ff1744;
+            font-size: 1.15em;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            text-shadow: 0 2px 8px #b71c1c77;
+        }
+        .lyrics-container p:first-child {
+            margin-top: 0;
+        }
+        .lyrics-container p:last-child {
+            margin-bottom: 0;
+        }
+        .back-btn {
+            display: inline-block;
+            margin: 0 auto 0 0;
+            margin-top: 18px;
+            padding: 12px 32px;
+            background: linear-gradient(90deg, #b71c1c 60%, #ff1744 100%);
+            color: #fff;
+            font-family: inherit;
+            font-size: 1.08rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 24px;
+            box-shadow: 0 2px 12px #b71c1c55;
+            cursor: pointer;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            z-index: 2;
+        }
+        .back-btn:hover {
+            background: linear-gradient(90deg, #ff1744 0%, #b71c1c 100%);
+            color: #fff;
+            transform: translateY(-2px) scale(1.04);
+            box-shadow: 0 6px 24px #ff174455;
+            text-decoration: none;
+        }
+        /* Scrollbar styling for aesthetics */
+        ::-webkit-scrollbar {
+            width: 10px;
+            background: #1a1a1a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #b71c1c;
+            border-radius: 5px;
+        }
+        @media (max-width: 900px) {
+            .lyrics-container {
+                padding: 28px 8vw 18px 8vw;
+            }
+        }
+        @media (max-width: 600px) {
+            .header {
+                padding: 24px 0 14px 0;
+            }
+            .header h1 {
+                font-size: 2rem;
+            }
+            .lyrics-container {
+                padding: 12px 2vw 8px 2vw;
+            }
+            .divider {
+                width: 50px;
+            }
+            .back-btn {
+                width: 100%;
+                padding: 12px 0;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header"> 
+        <h1>Eye Of The Tiger</h1>
+        <h3>Song by Survivor</h3>
+    </div>
+    <div class="divider"></div>
+    <div class="lyrics-container">
+        <a href="https://perezfinalproject.tiiny.site" class="back-btn">&#8592; Back to Home</a>
+        <p>
+            <b>[Verse 1]</b><br>
+            Rising up, back on the street<br>
+            Did my time, took my chances<br>
+            Went the distance, now I'm back on my feet<br>
+            Just a man and his will to survive<br>
+        </p>
+        <p>
+            So many times it happens too fast<br>
+            You trade your passion for glory<br>
+            Don't lose your grip on the dreams of the past<br>
+            You must fight just to keep them alive<br>
+        </p>
+        <p>
+            <b>[Chorus]</b><br>
+            It's the eye of the tiger<br>
+            It's the thrill of the fight<br>
+            Rising up to the challenge of our rival<br>
+            And the last known survivor<br>
+        </p>
+        <p>
+            Stalks his prey in the night<br>
+            And he's watching us all with the eye of the tiger<br>
+            <b>[Verse 2]</b><br>
+            Face to face, out in the heat<br>
+            Hanging tough, staying hungry<br>
+        </p>
+        <p>
+            They stack the odds 'til we take to the street<br>
+            For the kill with the skill to survive<br>
+            <b>[Chorus]</b><br>
+            It's the eye of the tiger<br>
+            It's the thrill of the fight<br>
+        </p>
+        <p>
+            <b>[Verse 3]</b><br>
+            Rising up to the challenge of our rival<br>
+            And the last known survivor<br>
+            Stalks his prey in the night<br>
+            And he's watching us all with the eye of the tiger<br>
+            Rising up, straight to the top<br>
+        </p>
+        <p>
+            Had the guts, got the glory<br>
+            Went the distance, now I'm not gonna stop<br>
+            Just a man and his will to survive<br>
+            <b>[Chorus]</b><br>
+            It's the eye of the tiger<br>
+            It's the thrill of the fight<br>
+            Rising up to the challenge of our rival<br>
+            And the last known survivor<br>
+            Stalks his prey in the night<br>
+            And he's watching us all with the eye of the tiger<br>
+        </p>
+        <p>
+            <b>[Outro]</b><br>
+            The eye of the tiger<br>
+            The eye of the tiger<br>
+            The eye of the tiger<br>
+            The eye of the tiger<br>
+        </p>
+    </div>
+</body>
+</html>

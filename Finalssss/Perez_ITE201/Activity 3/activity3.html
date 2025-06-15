@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perez, Christian Paul N</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d0000 100%);
+            font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            min-height: 100vh;
+        }
+        .header {
+            background: linear-gradient(90deg, #b71c1c 60%, #880808 100%);
+            text-align: center;
+            padding: 48px 0 32px 0;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+            border-bottom-left-radius: 48px;
+            border-bottom-right-radius: 48px;
+            position: relative;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            margin: 0 0 12px 0;
+            letter-spacing: 2px;
+            color: #fff;
+            text-shadow: 0 4px 24px #b71c1c, 0 2px 8px #000;
+            font-weight: 700;
+        }
+        .header h3 {
+            font-size: 1.2rem;
+            margin: 0;
+            color: #ffb3b3;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+        .divider {
+            width: 90px;
+            height: 5px;
+            background: linear-gradient(90deg, #ff1744 0%, #b71c1c 100%);
+            border-radius: 3px;
+            margin: 36px auto 28px auto;
+            box-shadow: 0 2px 12px #b71c1c66;
+        }
+        .section-container {
+            max-width: 800px;
+            margin: 36px auto 0 auto;
+            background: rgba(30, 0, 0, 0.93);
+            border-radius: 28px;
+            box-shadow: 0 8px 40px rgba(255,23,68,0.10), 0 2px 12px rgba(0,0,0,0.18);
+            padding: 36px 48px;
+            border: 2px solid #ff1744;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 32px;
+        }
+        .section-container:before {
+            content: "";
+            position: absolute;
+            left: -40px;
+            top: -40px;
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, #ff1744 0%, transparent 70%);
+            opacity: 0.13;
+            z-index: 0;
+        }
+        .section-container:after {
+            content: "";
+            position: absolute;
+            right: -40px;
+            bottom: -40px;
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, #b71c1c 0%, transparent 70%);
+            opacity: 0.13;
+            z-index: 0;
+        }
+        .section-content {
+            position: relative;
+            z-index: 1;
+        }
+        h2, h3 {
+            color: #ff1744;
+            margin-bottom: 10px;
+            margin-top: 0;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        ul, ol, dl {
+            color: #fff;
+            font-size: 1.08rem;
+            line-height: 1.8;
+            margin: 0 0 10px 0;
+            font-weight: 400;
+            padding-left: 24px;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        blockquote {
+            margin: 0 0 0 16px;
+            padding-left: 16px;
+            border-left: 3px solid #ff1744;
+        }
+        i {
+            color: #ffb3b3;
+        }
+        dt {
+            font-weight: 600;
+            color: #ff1744;
+        }
+        .back-btn {
+            display: inline-block;
+            margin: 0 0 24px 0;
+            padding: 12px 32px;
+            background: linear-gradient(90deg, #b71c1c 60%, #ff1744 100%);
+            color: #fff;
+            font-family: inherit;
+            font-size: 1.08rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 24px;
+            box-shadow: 0 2px 12px #b71c1c55;
+            cursor: pointer;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            z-index: 2;
+        }
+        .back-btn:hover {
+            background: linear-gradient(90deg, #ff1744 0%, #b71c1c 100%);
+            color: #fff;
+            transform: translateY(-2px) scale(1.04);
+            box-shadow: 0 6px 24px #ff174455;
+            text-decoration: none;
+        }
+        ::-webkit-scrollbar {
+            width: 10px;
+            background: #1a1a1a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #b71c1c;
+            border-radius: 5px;
+        }
+        @media (max-width: 900px) {
+            .section-container {
+                padding: 24px 6vw;
+            }
+        }
+        @media (max-width: 600px) {
+            .header {
+                padding: 24px 0 14px 0;
+            }
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            .section-container {
+                padding: 12px 2vw;
+            }
+            .divider {
+                width: 50px;
+            }
+            .back-btn {
+                width: 100%;
+                padding: 12px 0;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header"> 
+        <h1>Perez, Christian Paul N.</h1>
+        <h3>Resume</h3>
+    </div>
+    <div class="divider"></div>
+
+    <div class="section-container">
+        <a href="https://perezfinalproject.tiiny.site" class="back-btn">&#8592; Back to Home</a>
+        <div class="section-content">
+            <h2>Contact Information</h2>
+            <ul type="square">
+                <li>Contact No: 0992 398 5436</li>
+                <li>Email: christianperez@gmail.com</li>
+                <li>Address: 5748 Villa Teodora Sta.Lucia St. Mabalacat City Pampanga</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section-container">
+        <div class="section-content">
+            <h2>Objective</h2>
+            <ul>
+                <li>Seeking a position in life to utilize my skills and abilities and achieve professional growth while being resourceful, 
+                innovative and flexible. To add valuable assets to your esteemed organization as an active member.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section-container">
+        <div class="section-content">
+            <h2>Educational Background</h2>
+            <ol>
+                <li>
+                    <h3>College</h3>
+                    <i>(2023-2027)</i><br>
+                    National University Clark
+                </li>
+                <li>
+                    <h3>SHS</h3>
+                    <i>(2020-2023)</i><br>
+                    Children Of Fatima Mabiga Senior High School
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="section-container">
+        <div class="section-content">
+            <h2>Skills</h2>
+            <ul type="circle">
+                <li>Java</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Cybersecurity</li>
+                <li>Network architecture</li>
+                <li>User experience design</li>
+                <li>Operating systems</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section-container">
+        <div class="section-content">
+            <h2>Experience</h2>
+            <ul type="square">
+                <li>WEB DEVELOPER</li>
+                <li>Software Engineer</li>
+                <li>FULL STACK DEVELOPER</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section-container">
+        <div class="section-content">
+            <h2>Projects</h2>
+            <ol>
+                <li>
+                    <b><i>February 2025</i></b><br>
+                    Pickify App<br>
+                    Spinning the Wheel and Automatic Groupings
+                </li>
+                <li>
+                    <b><i>March 2024</i></b><br>
+                    Guess IT<br>
+                    Guessing app where you will exercise your memory
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="section-container">
+        <div class="section-content">
+            <h2>Certifications & Awards</h2>
+            <dl>
+                <dt>COMPTIA</dt>
+                <dd><i>- CompTIA IT Fundamentals</i></dd>
+                <dt>CISCO</dt>
+                <dd><i>- Cisco offers certifications at four levels: entry, associate, professional and expert. There are four to five levels of certification: Associate (CCNA /CCDA), Professional (CCNP /CCDP)</i></dd>
+                <dt>Code Chum</dt>
+                <dd><i>- CodeChum National Programming Competition 2024 - Finalist</i></dd>
+            </dl>
+        </div>
+    </div>
+</body>
+</html>

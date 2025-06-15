@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skyline University Enrollment</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0f7e9, #f0fff4);
+      color: #2f4858;
+    }
+
+    .navbar {
+      background-color: #2e7d32;
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      color: white;
+    }
+
+    .navbar img {
+      width: 50px;
+      margin-right: 15px;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    .main-div {
+      padding: 1rem;
+      background-color: #ffffff;
+      margin: 1rem auto;
+      max-width: 850px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .main-div p {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .main-div .note {
+      background-color: #c8e6c9;
+      padding: 10px;
+      color: #2e7d32;
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 6px;
+    }
+
+    form {
+      max-width: 850px;
+      margin: 0 auto 2rem;
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 600;
+      color: #33691e;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="tel"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    select optgroup {
+      font-weight: bold;
+    }
+
+    .section-title {
+      margin-top: 2rem;
+      font-size: 18px;
+      font-weight: 700;
+      color: #1b5e20;
+      border-bottom: 2px solid #a5d6a7;
+      padding-bottom: 5px;
+    }
+
+    .checkbox-container {
+      background-color: #e8f5e9;
+      border-left: 5px solid #2e7d32;
+      padding: 1rem;
+      margin-top: 2rem;
+      border-radius: 6px;
+    }
+
+    .checkbox-container label {
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .button-group button {
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .create {
+      background-color: #388e3c;
+      color: white;
+    }
+
+    .cancel {
+      background-color: #c8c8c8;
+      color: #333;
+    }
+
+    .create:hover {
+      background-color: #2e7d32;
+    }
+
+    .cancel:hover {
+      background-color: #b0b0b0;
+    }
+
+    span {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <img src="dln-removebg-preview.png" alt="Skyline University Logo" />
+    <div class="logo">Skyline University Enrollment</div>
+  </nav>
+
+  <div class="main-div">
+    <p>Online Enrollment</p>
+    <p class="note">
+      Reminder: Please provide accurate and complete information. <br />
+      Fields marked with an asterisk (<span>*</span>) are required.
+    </p>
+  </div>
+
+  <form action="">
+    <div class="application">
+      <p>Application Term & Course/Strand</p>
+      <hr />
+ 
+      <label for="campus">Campus:<span>*</span></label>
+      <select name="campus" id="campus">
+        <optgroup label="National Capital Region (NCR)">
+          <option>SKL Manila</option>
+          <option>SKL Fairview</option>
+          <option>SKL Moa</option>
+          <option>SKL Las Pinas</option>
+        </optgroup>
+        <optgroup label="Region III (Central Luzon)">
+          <option>SKL Baliwag</option>
+          <option>SKL Clark</option>
+        </optgroup>
+        <optgroup label="Region IV-A (Calabarzon)">
+          <option>SKL Laguna</option>
+          <option>SKL Dasmarinas</option>
+          <option>SKL Lipa</option>
+        </optgroup>
+        <optgroup label="Region VI (Western Visayas)">
+          <option>SKL Bacolod</option>
+        </optgroup>
+        <optgroup label="Region VII (Central Visayas)">
+          <option>SKL Cebu</option>
+        </optgroup>
+      </select>
+ 
+
+      <label for="acadyear">Academic Term:<span>*</span></label>
+      <select name="acadyear" id="acadyear">
+        <option>2025 - 2026</option>
+        <option>2026 - 2027</option>
+        <option>2027 - 2028</option>
+      </select>
+
+      <label for="applyType">Applying For:<span>*</span></label>
+      <select name="applyType" id="applyType">
+        <optgroup label="Basic Education">
+          <option>Grade 11</option>
+          <option>Grade 12</option>
+        </optgroup>
+        <optgroup label="Higher Education">
+          <option>Freshman</option>
+          <option>Transferee</option>
+          <option>Second Degree Taker</option>
+          <option>Cross Enrolee</option>
+        </optgroup>
+      </select>
+
+      <label for="apply">Academic Program:<span>*</span></label>
+      <select name="apply" id="apply">
+        <optgroup label="Senior High School (SHS)">
+          <option value="ABM">Accountancy, Business, and Management (ABM)</option>
+          <option value="HUMSS">Humanities and Social Sciences (HUMSS)</option>
+          <option value="STEM">Science, Technology, Engineering and Mathematics (STEM)</option>
+        </optgroup>
+        <optgroup label="Education & Arts">
+          <option value="BAComm">BA in Communication</option>
+          <option value="BAPolsci">BA in Political Science</option>
+          <option value="BSMT">BS in Medical Technology</option>
+          <option value="BSPsy">BS in Psychology</option>
+        </optgroup>
+        <optgroup label="Business & Management">
+          <option value="BSAccountancy">BS in Accountancy</option>
+          <option value="BSBA-MktgMgmt">BSBA Major in Marketing</option>
+          <option value="BSMA">BS in Management Accounting</option>
+          <option value="BSTM">BS in Tourism Management</option>
+        </optgroup>
+        <optgroup label="Engineering & Tech">
+          <option value="BSArch">BS in Architecture</option>
+          <option value="BSCE">BS in Civil Engineering</option>
+          <option value="BSCpE">BS in Computer Engineering</option>
+          <option value="BSIT">BSIT - Mobile & Web Development</option>
+        </optgroup>
+        <optgroup label="Health Sciences">
+          <option value="DMD">Doctor of Dental Medicine</option>
+        </optgroup>
+      </select>
+    </div>
+
+    <div class="basicinfo">
+      <p class="section-title">Basic Information</p>
+      <label for="firstName">First Name:<span>*</span></label>
+      <input type="text" id="firstName" placeholder="e.g. Juan" required />
+
+      <label for="middleName">Middle Name:</label>
+      <input type="text" id="middleName" placeholder="Leave blank if not applicable" />
+
+      <label for="lastName">Last Name:<span>*</span></label>
+      <input type="text" id="lastName" placeholder="e.g. Dela Cruz" required />
+
+      <label for="dob">Date of Birth:<span>*</span></label>
+      <input type="date" id="dob" required />
+
+      <label for="email">Email Address:<span>*</span></label>
+      <input type="email" id="email" placeholder="example@email.com" required />
+
+      <label for="mobile">Mobile No.:<span>*</span></label>
+      <input type="tel" id="mobile" placeholder="(09) 12345-6789" required />
+
+      <label for="nationality">Nationality:<span>*</span></label>
+      <select id="nationality">
+        <option value="Filipino">Filipino</option>
+        <option value="American">American</option>
+        <option value="Japanese">Japanese</option>
+        <option value="Korean">Korean</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <div class="checkbox-container">
+      <input type="checkbox" id="agreement" required />
+      <label for="agreement">
+        I authorize Skyline University to process my data for enrollment and communication purposes in compliance with data privacy laws.
+      </label>
+    </div>
+
+    <div class="button-group">
+      <button type="submit" class="create">Submit</button>
+      <button type="reset" class="cancel">Clear</button>
+    </div>
+  </form>
+</body>
+</html>

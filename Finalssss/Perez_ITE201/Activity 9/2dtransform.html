@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(ellipse at top left, #2d0000 0%, #1a1a1a 100%);
+      color: #fff;
+      font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+    }
+    .sidenav {
+      height: 100vh;
+      width: 220px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: linear-gradient(180deg, #b71c1c 60%, #880808 100%);
+      border-top-right-radius: 32px;
+      border-bottom-right-radius: 32px;
+      box-shadow: 2px 0 24px #00000044;
+      padding-top: 40px;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      animation: sidenavfade 1s cubic-bezier(.77,0,.18,1);
+    }
+    @keyframes sidenavfade {
+      from { opacity: 0; transform: translateX(-40px);}
+      to { opacity: 1; transform: translateX(0);}
+    }
+    .sidenav a {
+      padding: 16px 32px;
+      text-decoration: none;
+      font-size: 1.08rem;
+      color: #fff;
+      display: block;
+      border-radius: 8px 20px 20px 8px;
+      margin: 0 8px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      transition: background 0.2s, color 0.2s, padding-left 0.2s;
+    }
+    .sidenav a.active, .sidenav a:hover {
+      background: #ff1744;
+      color: #fff;
+      padding-left: 44px;
+      box-shadow: 0 2px 12px #b71c1c55;
+    }
+    .main-content {
+      margin-left: 240px;
+      padding: 48px 32px 32px 32px;
+      min-height: 100vh;
+      max-width: 900px;
+      animation: mainfade 1.2s cubic-bezier(.77,0,.18,1) 0.2s both;
+    }
+    @keyframes mainfade {
+      from { opacity: 0; transform: translateY(40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .main-content h2 {
+      color: #ff1744;
+      font-size: 2.1rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 12px #b71c1c, 0 1px 4px #000;
+    }
+    .main-content h3 {
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+      letter-spacing: 1px;
+      text-shadow: 0 1px 4px #b71c1c55;
+    }
+    .main-content p {
+      color: #fff;
+      font-size: 1.08rem;
+      margin-bottom: 14px;
+      line-height: 1.7;
+      text-shadow: 0 1px 4px #00000033;
+    }
+    .back-btn {
+      display: inline-block;
+      margin: 0 0 24px 0;
+      padding: 12px 32px;
+      background: linear-gradient(90deg, #b71c1c 60%, #ff1744 100%);
+      color: #fff;
+      font-family: inherit;
+      font-size: 1.08rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 24px;
+      box-shadow: 0 2px 12px #b71c1c55;
+      cursor: pointer;
+      text-decoration: none;
+      letter-spacing: 1px;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      position: relative;
+      z-index: 2;
+    }
+    .back-btn:hover {
+      background: linear-gradient(90deg, #ff1744 0%, #b71c1c 100%);
+      color: #fff;
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 6px 24px #ff174455;
+      text-decoration: none;
+    }
+    @media (max-width: 900px) {
+      .sidenav {
+        width: 100vw;
+        height: auto;
+        flex-direction: row;
+        border-radius: 0 0 24px 24px;
+        padding: 12px 0 12px 0;
+        position: static;
+        box-shadow: 0 4px 24px #00000044;
+        justify-content: center;
+        align-items: center;
+      }
+      .sidenav a {
+        padding: 12px 18px;
+        margin: 0 4px;
+        border-radius: 8px;
+        font-size: 1rem;
+      }
+      .main-content {
+        margin-left: 0;
+        padding: 24px 8vw 24px 8vw;
+      }
+    }
+    @media (max-width: 600px) {
+      .main-content {
+        padding: 16px 2vw 16px 2vw;
+      }
+      .sidenav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 0;
+      }
+      .sidenav a {
+        width: 100%;
+        margin: 2px 0;
+        padding: 10px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="sidenav">
+    <a class="active" href="navbar.html">Home</a>
+    <a href="translatemethod.html">Translate Method</a>
+    <a href="transition.html">Transition</a>
+    <a href="webfont.html">Web Font</a>
+  </nav>
+
+  <div class="main-content">
+    <a href="https://perezfinalproject.tiiny.site" class="back-btn">&#8592; Back to Home</a>
+    <h2>2D Transform Demo</h2>
+    <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
+    <p>
+      Notice that this page uses a fixed side navigation with a modern black and red theme. The main content is offset to the right of the sidenav, and the navigation stays visible as you scroll.
+    </p>
+    <p>
+      The links on the left allow you to explore different CSS transform and transition demos.
+    </p>
+    <p>Some text..</p>
+    <p>Some text..</p>
+    <p>Some text..</p>
+    <p>Some text..</p>
+    <p>Some text..</p>
+    <p>Some text..</p>
+    <p>Some text..</p>
+  </div>
+
+</body>
+</html>

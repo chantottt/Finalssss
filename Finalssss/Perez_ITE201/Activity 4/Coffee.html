@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d0000 100%);
+            font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            min-height: 100vh;
+        }
+        .header {
+            background: linear-gradient(90deg, #b71c1c 60%, #880808 100%);
+            text-align: center;
+            padding: 48px 0 32px 0;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+            border-bottom-left-radius: 48px;
+            border-bottom-right-radius: 48px;
+            position: relative;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            margin: 0 0 12px 0;
+            letter-spacing: 2px;
+            color: #fff;
+            text-shadow: 0 4px 24px #b71c1c, 0 2px 8px #000;
+            font-weight: 700;
+        }
+        .divider {
+            width: 90px;
+            height: 5px;
+            background: linear-gradient(90deg, #ff1744 0%, #b71c1c 100%);
+            border-radius: 3px;
+            margin: 36px auto 28px auto;
+            box-shadow: 0 2px 12px #b71c1c66;
+        }
+        .content-container {
+            max-width: 600px;
+            margin: 48px auto 0 auto;
+            background: rgba(30, 0, 0, 0.93);
+            border-radius: 28px;
+            box-shadow: 0 8px 40px rgba(255,23,68,0.10), 0 2px 12px rgba(0,0,0,0.18);
+            padding: 48px 36px;
+            border: 2px solid #ff1744;
+            position: relative;
+            text-align: center;
+        }
+        .content-container:before {
+            content: "";
+            position: absolute;
+            left: -40px;
+            top: -40px;
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, #ff1744 0%, transparent 70%);
+            opacity: 0.13;
+            z-index: 0;
+        }
+        .content-container:after {
+            content: "";
+            position: absolute;
+            right: -40px;
+            bottom: -40px;
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, #b71c1c 0%, transparent 70%);
+            opacity: 0.13;
+            z-index: 0;
+        }
+        .content-container h2 {
+            color: #ff1744;
+            font-size: 2rem;
+            margin-bottom: 18px;
+            margin-top: 0;
+            font-weight: 700;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 1;
+        }
+        .content-container p {
+            font-size: 1.15rem;
+            color: #fff;
+            margin-bottom: 32px;
+            position: relative;
+            z-index: 1;
+        }
+        .home-link {
+            display: inline-block;
+            background: linear-gradient(90deg, #ff1744 0%, #b71c1c 100%);
+            color: #fff;
+            padding: 14px 36px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 12px #b71c1c66;
+            transition: background 0.2s, transform 0.2s;
+            position: relative;
+            z-index: 1;
+        }
+        .home-link:hover {
+            background: linear-gradient(90deg, #b71c1c 0%, #ff1744 100%);
+            transform: translateY(-2px) scale(1.04);
+        }
+        @media (max-width: 700px) {
+            .content-container {
+                padding: 24px 6vw;
+            }
+        }
+        @media (max-width: 600px) {
+            .header {
+                padding: 24px 0 14px 0;
+            }
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            .divider {
+                width: 50px;
+            }
+            .content-container {
+                padding: 12px 2vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header"> 
+        <h1>Coffee</h1>
+    </div>
+    <div class="divider"></div>
+    <div class="content-container">
+        <h2>Freshly Brewed Coffee</h2>
+        <p>
+            Enjoy a cup of our rich, aromatic coffee—perfectly brewed to energize your day. Whether you like it black or with cream and sugar, our coffee delivers a bold flavor and smooth finish in every sip.
+        </p>
+        <a href="Activity4_Perez.html" class="home-link">Go to home</a>
+    </div>
+</body>
+</html>

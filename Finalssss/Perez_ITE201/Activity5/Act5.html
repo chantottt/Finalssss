@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian Paul N. Perez</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d0000 100%);
+            font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            min-height: 100vh;
+        }
+        .header {
+            background: linear-gradient(90deg, #b71c1c 60%, #880808 100%);
+            text-align: center;
+            padding: 48px 0 32px 0;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+            border-bottom-left-radius: 48px;
+            border-bottom-right-radius: 48px;
+            position: relative;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            margin: 0 0 12px 0;
+            letter-spacing: 2px;
+            color: #fff;
+            text-shadow: 0 4px 24px #b71c1c, 0 2px 8px #000;
+            font-weight: 700;
+        }
+        .divider {
+            width: 90px;
+            height: 5px;
+            background: linear-gradient(90deg, #ff1744 0%, #b71c1c 100%);
+            border-radius: 3px;
+            margin: 36px auto 28px auto;
+            box-shadow: 0 2px 12px #b71c1c66;
+        }
+        .table-container {
+            max-width: 900px;
+            margin: 48px auto 0 auto;
+            background: rgba(30, 0, 0, 0.93);
+            border-radius: 28px;
+            box-shadow: 0 8px 40px rgba(255,23,68,0.10), 0 2px 12px rgba(0,0,0,0.18);
+            padding: 48px 36px;
+            border: 2px solid #ff1744;
+            position: relative;
+            text-align: center;
+        }
+        .table-container:before {
+            content: "";
+            position: absolute;
+            left: -40px;
+            top: -40px;
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, #ff1744 0%, transparent 70%);
+            opacity: 0.13;
+            z-index: 0;
+        }
+        .table-container:after {
+            content: "";
+            position: absolute;
+            right: -40px;
+            bottom: -40px;
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, #b71c1c 0%, transparent 70%);
+            opacity: 0.13;
+            z-index: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 32px 0;
+            background: rgba(255,255,255,0.03);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px #b71c1c33;
+        }
+        caption {
+            caption-side: top;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #ff1744;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+        th, td {
+            border: 1px solid #ff1744;
+            padding: 12px 8px;
+            font-size: 1.1rem;
+            color: #fff;
+            background: rgba(30,0,0,0.85);
+        }
+        th {
+            background: linear-gradient(90deg, #b71c1c 60%, #880808 100%);
+            color: #fff;
+            font-weight: 700;
+        }
+        tr:nth-child(even) td {
+            background: rgba(255,23,68,0.07);
+        }
+        .back-btn {
+            display: inline-block;
+            margin: 0 0 24px 0;
+            padding: 12px 32px;
+            background: linear-gradient(90deg, #b71c1c 60%, #ff1744 100%);
+            color: #fff;
+            font-family: inherit;
+            font-size: 1.08rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 24px;
+            box-shadow: 0 2px 12px #b71c1c55;
+            cursor: pointer;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            z-index: 2;
+        }
+        .back-btn:hover {
+            background: linear-gradient(90deg, #ff1744 0%, #b71c1c 100%);
+            color: #fff;
+            transform: translateY(-2px) scale(1.04);
+            box-shadow: 0 6px 24px #ff174455;
+            text-decoration: none;
+        }
+        @media (max-width: 900px) {
+            .table-container {
+                padding: 24px 6vw;
+            }
+        }
+        @media (max-width: 600px) {
+            .header {
+                padding: 24px 0 14px 0;
+            }
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            .divider {
+                width: 50px;
+            }
+            .table-container {
+                padding: 12px 2vw;
+            }
+            table, th, td {
+                font-size: 0.95rem;
+            }
+            .back-btn {
+                width: 100%;
+                padding: 12px 0;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header"> 
+        <h1>Christian Paul N. Perez</h1>
+    </div>
+    <div class="divider"></div>
+    <div class="table-container">
+        <a href="https://perezfinalweb.tiiny.site" class="back-btn">&#8592; Back to Home</a>
+        <!--Table 1-->
+        <table>
+            <caption>ITEM 1</caption>
+            <tr>
+                <td colspan="3">1</td>
+                <td rowspan="2">2</td>
+                <td rowspan="2">3</td>
+            </tr>
+            <tr>
+                <td rowspan="2">4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td colspan="3">7</td>
+                <td>8</td>
+            </tr>
+        </table>
+        <!--Table 2-->
+        <table>
+            <caption>ITEM 2</caption>
+            <tr>
+                <td>1</td>
+                <td colspan="5">2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td rowspan="2">4</td>
+                <td>5</td>
+                <td rowspan="2">6</td>
+                <td colspan="3">7</td>
+                <td rowspan="2">8</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td colspan="3">10</td>
+            </tr>
+            <tr>
+                <td colspan="3">11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+            </tr>
+        </table>
+        <!--Table 3-->
+        <table>
+            <caption>ITEM 3</caption>
+            <tr>
+                <td>1</td>
+                <td rowspan="4">2</td>
+                <td rowspan="8">3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td rowspan="2" style="height: 35px;">7</td>
+                <td rowspan="3">8</td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+                <td colspan="2">9</td>
+            </tr>
+            <tr>
+                <td rowspan="3">10</td>
+                <td>11</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td rowspan="2">13</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>15</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

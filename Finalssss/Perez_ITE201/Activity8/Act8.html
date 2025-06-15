@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skyline University Enrollment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d0000 100%);
+      color: #fff;
+      min-height: 100vh;
+    }
+    header {
+      background: linear-gradient(90deg, #b71c1c 60%, #880808 100%);
+      text-align: center;
+      padding: 48px 0 32px 0;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+      border-bottom-left-radius: 48px;
+      border-bottom-right-radius: 48px;
+      position: relative;
+    }
+    header .logo {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 2px;
+      text-shadow: 0 4px 24px #b71c1c, 0 2px 8px #000;
+      margin-left: 15px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    header img {
+      width: 60px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+    .divider {
+      width: 90px;
+      height: 5px;
+      background: linear-gradient(90deg, #ff1744 0%, #b71c1c 100%);
+      border-radius: 3px;
+      margin: 36px auto 28px auto;
+      box-shadow: 0 2px 12px #b71c1c66;
+    }
+    main {
+      max-width: 900px;
+      margin: 48px auto 0 auto;
+      background: rgba(30, 0, 0, 0.93);
+      border-radius: 28px;
+      box-shadow: 0 8px 40px rgba(255,23,68,0.10), 0 2px 12px rgba(0,0,0,0.18);
+      padding: 48px 36px;
+      border: 2px solid #ff1744;
+      position: relative;
+    }
+    main:before {
+      content: "";
+      position: absolute;
+      left: -40px;
+      top: -40px;
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle, #ff1744 0%, transparent 70%);
+      opacity: 0.13;
+      z-index: 0;
+    }
+    main:after {
+      content: "";
+      position: absolute;
+      right: -40px;
+      bottom: -40px;
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle, #b71c1c 0%, transparent 70%);
+      opacity: 0.13;
+      z-index: 0;
+    }
+    .main-div {
+      padding: 1rem 1.5rem 1.5rem 1.5rem;
+      background-color: #1a1a1a;
+      margin: 1rem auto 2rem auto;
+      max-width: 850px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(255, 23, 68, 0.10);
+      color: #fff;
+      border: 2px solid #ff1744;
+    }
+    .main-div p {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0 0 18px 0;
+      color: #fff;
+      letter-spacing: 1px;
+      display: inline-block;
+      background: #b71c1c;
+      padding: 0.2em 0.7em 0.2em 0.7em;
+      border-radius: 4px 0 8px 0;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 12px #b71c1c66;
+    }
+    .main-div .note {
+      background: #2d0000;
+      padding: 18px 18px 18px 32px;
+      color: #ff1744;
+      font-size: 1.15rem;
+      font-weight: 500;
+      border-radius: 10px;
+      margin-top: 10px;
+      margin-bottom: 0;
+      border-left: 6px solid #ff1744;
+      box-shadow: 0 2px 12px #b71c1c33;
+    }
+    .main-div .note span {
+      color: #fff;
+      font-weight: bold;
+    }
+    form {
+      max-width: 850px;
+      margin: 0 auto 2rem;
+      background: #1a1a1a;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(255, 23, 68, 0.10);
+      color: #fff;
+      border: 2px solid #ff1744;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 600;
+      color: #ff1744;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="tel"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #b71c1c;
+      border-radius: 6px;
+      font-size: 14px;
+      background: #2d0000;
+      color: #fff;
+      transition: border 0.2s;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="date"]:focus,
+    input[type="tel"]:focus,
+    select:focus {
+      border: 1.5px solid #ff1744;
+      outline: none;
+      background: #1a1a1a;
+    }
+    select optgroup {
+      font-weight: bold;
+      color: #b71c1c;
+      background: #fff;
+    }
+    .section-title {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ff1744;
+      border-bottom: 4px solid #b71c1c;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+    .checkbox-container {
+      background: #2d0000;
+      border-left: 7px solid #ff1744;
+      padding: 1.2rem 1.5rem;
+      margin-top: 2rem;
+      border-radius: 16px;
+      color: #ff1744;
+      box-shadow: 0 2px 12px #b71c1c33;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      font-size: 1.15rem;
+    }
+    .checkbox-container input[type="checkbox"] {
+      accent-color: #ff1744;
+      width: 26px;
+      height: 26px;
+      margin-top: 2px;
+      margin-right: 8px;
+      flex-shrink: 0;
+    }
+    .checkbox-container label {
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: #ff1744;
+      margin: 0;
+      line-height: 1.5;
+      cursor: pointer;
+      user-select: none;
+    }
+    .button-group {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .button-group button {
+      padding: 14px 36px;
+      font-size: 1.15rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 12px #b71c1c33;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .create {
+      background: linear-gradient(90deg, #ff1744 0%, #b71c1c 100%);
+      color: #fff;
+    }
+    .cancel {
+      background: linear-gradient(90deg, #c8c8c8 0%, #b0b0b0 100%);
+      color: #333;
+    }
+    .create:hover {
+      background: linear-gradient(90deg, #b71c1c 0%, #ff1744 100%);
+      transform: translateY(-2px) scale(1.04);
+    }
+    .cancel:hover {
+      background: linear-gradient(90deg, #b0b0b0 0%, #c8c8c8 100%);
+      transform: translateY(-2px) scale(1.04);
+    }
+    span {
+      color: #ff1744;
+    }
+    .back-btn {
+      display: inline-block;
+      margin: 0 0 24px 0;
+      padding: 12px 32px;
+      background: linear-gradient(90deg, #b71c1c 60%, #ff1744 100%);
+      color: #fff;
+      font-family: inherit;
+      font-size: 1.08rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 24px;
+      box-shadow: 0 2px 12px #b71c1c55;
+      cursor: pointer;
+      text-decoration: none;
+      letter-spacing: 1px;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      position: relative;
+      z-index: 2;
+    }
+    .back-btn:hover {
+      background: linear-gradient(90deg, #ff1744 0%, #b71c1c 100%);
+      color: #fff;
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 6px 24px #ff174455;
+      text-decoration: none;
+    }
+    @media (max-width: 900px) {
+      main, .main-div, form {
+        padding: 12px 2vw;
+      }
+      form {
+        padding: 1rem;
+      }
+      .button-group button {
+        padding: 10px 16px;
+        font-size: 1rem;
+      }
+      .main-div p {
+        font-size: 1.2rem;
+      }
+      .main-div .note {
+        font-size: 1rem;
+        padding: 12px;
+      }
+      .section-title {
+        font-size: 1.1rem;
+      }
+      .checkbox-container {
+        font-size: 1rem;
+        padding: 0.7rem 1rem;
+      }
+    }
+    @media (max-width: 600px) {
+      header {
+        padding: 24px 0 14px 0;
+      }
+      header .logo {
+        font-size: 1.2rem;
+      }
+      .divider {
+        width: 50px;
+      }
+      main, .main-div, form {
+        padding: 6px 0.5vw;
+      }
+      form {
+        padding: 0.5rem;
+      }
+      .button-group {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .button-group button {
+        width: 100%;
+      }
+      .checkbox-container {
+        flex-direction: column;
+        gap: 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logoo-removebg-preview.png" alt="Skyline University Logo" />
+    <span class="logo">Skyline University(SKL) Registration</span>
+  </header>
+  <div class="divider"></div>
+  <main>
+    <a href="https://perezfinalproject.tiiny.site" class="back-btn">&#8592; Back to Home</a>
+    <div class="main-div">
+      <p>Online Enrollment</p>
+      <p class="note">
+        Reminder: Please provide accurate and complete information. <br />
+        Fields marked with an asterisk (<span>*</span>) are required.
+      </p>
+    </div>
+    <form action="">
+      <div class="application">
+        <p>Application Term & Course/Strand</p>
+        <hr />
+        <label for="campus">Campus:<span>*</span></label>
+        <select name="campus" id="campus">
+          <optgroup label="National Capital Region (NCR)">
+            <option>SKL Manila</option>
+            <option>SKL Fairview</option>
+            <option>SKL Moa</option>
+            <option>SKL Las Pinas</option>
+          </optgroup>
+          <optgroup label="Region III (Central Luzon)">
+            <option>SKL Baliwag</option>
+            <option>SKL Clark</option>
+          </optgroup>
+          <optgroup label="Region IV-A (Calabarzon)">
+            <option>SKL Laguna</option>
+            <option>SKL Dasmarinas</option>
+            <option>SKL Lipa</option>
+          </optgroup>
+          <optgroup label="Region VI (Western Visayas)">
+            <option>SKL Bacolod</option>
+          </optgroup>
+          <optgroup label="Region VII (Central Visayas)">
+            <option>SKL Cebu</option>
+          </optgroup>
+        </select>
+        <label for="acadyear">Academic Term:<span>*</span></label>
+        <select name="acadyear" id="acadyear">
+          <option>2025 - 2026</option>
+          <option>2026 - 2027</option>
+          <option>2027 - 2028</option>
+        </select>
+        <label for="applyType">Applying For:<span>*</span></label>
+        <select name="applyType" id="applyType">
+          <optgroup label="Basic Education">
+            <option>Grade 11</option>
+            <option>Grade 12</option>
+          </optgroup>
+          <optgroup label="Higher Education">
+            <option>Freshman</option>
+            <option>Transferee</option>
+            <option>Second Degree Taker</option>
+            <option>Cross Enrolee</option>
+          </optgroup>
+        </select>
+        <label for="apply">Academic Program:<span>*</span></label>
+        <select name="apply" id="apply">
+          <optgroup label="Senior High School (SHS)">
+            <option value="ABM">Accountancy, Business, and Management (ABM)</option>
+            <option value="HUMSS">Humanities and Social Sciences (HUMSS)</option>
+            <option value="STEM">Science, Technology, Engineering and Mathematics (STEM)</option>
+          </optgroup>
+          <optgroup label="Education & Arts">
+            <option value="BAComm">BA in Communication</option>
+            <option value="BAPolsci">BA in Political Science</option>
+            <option value="BSMT">BS in Medical Technology</option>
+            <option value="BSPsy">BS in Psychology</option>
+          </optgroup>
+          <optgroup label="Business & Management">
+            <option value="BSAccountancy">BS in Accountancy</option>
+            <option value="BSBA-MktgMgmt">BSBA Major in Marketing</option>
+            <option value="BSMA">BS in Management Accounting</option>
+            <option value="BSTM">BS in Tourism Management</option>
+          </optgroup>
+          <optgroup label="Engineering & Tech">
+            <option value="BSArch">BS in Architecture</option>
+            <option value="BSCE">BS in Civil Engineering</option>
+            <option value="BSCpE">BS in Computer Engineering</option>
+            <option value="BSIT">BSIT - Mobile & Web Development</option>
+          </optgroup>
+          <optgroup label="Health Sciences">
+            <option value="DMD">Doctor of Dental Medicine</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="basicinfo">
+        <p class="section-title">Basic Information</p>
+        <label for="firstName">First Name:<span>*</span></label>
+        <input type="text" id="firstName" placeholder="e.g. Juan" required />
+        <label for="middleName">Middle Name:</label>
+        <input type="text" id="middleName" placeholder="Leave blank if not applicable" />
+        <label for="lastName">Last Name:<span>*</span></label>
+        <input type="text" id="lastName" placeholder="e.g. Dela Cruz" required />
+        <label for="dob">Date of Birth:<span>*</span></label>
+        <input type="date" id="dob" required />
+        <label for="email">Email Address:<span>*</span></label>
+        <input type="email" id="email" placeholder="example@email.com" required />
+        <label for="mobile">Mobile No.:<span>*</span></label>
+        <input type="tel" id="mobile" placeholder="(09) 12345-6789" required />
+        <label for="nationality">Nationality:<span>*</span></label>
+        <select id="nationality">
+          <option value="Filipino">Filipino</option>
+          <option value="American">American</option>
+          <option value="Japanese">Japanese</option>
+          <option value="Korean">Korean</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="checkbox-container">
+        <input type="checkbox" id="agreement" required />
+        <label for="agreement">
+          I authorize Skyline University to process my data for enrollment and communication purposes in compliance with data privacy laws.
+        </label>
+      </div>
+      <div class="button-group">
+        <button type="submit" class="create">Create Account</button>
+        <button type="reset" class="cancel">Cancel</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
